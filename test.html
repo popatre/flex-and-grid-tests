@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<body>
+
+  <div class="gridcont">
+<div class="rowone"> <h1 class="title">Title goes here</h1> </div>
+     <div class="rowtwo">
+        <div class="flexcont">
+          <h3 class="bb"> box 1 </h3>
+          <h3> box 2 </h3>
+          <h3> box 3</h3>
+          <h3> box 4 </h3>
+          <h3> box 5 </h3>
+          <h3> box 6 </h3>
+          <h3> box 7 </h3>
+          <h3> box 8 </h3>
+         </div>
+
+
+      <div class="twocols">
+
+         <div class="flexcol">
+
+         <h4 class="bbb"> col1 </h4>
+         <h4> col2 </h4>
+         <h4> col3 </h4>
+         <h4> col4 </h4>
+         <h4> col5 </h4>
+         <h4> col6 </h4>
+         </div>
+
+         <div class="right">
+          <h4 class="bbbb"> right </h4>
+          <h4> right </h4>
+          <h4> right </h4>
+          <h4> right </h4>
+          <h4> right </h4>
+          <h4> right </h4>
+          </div>
+
+
+      </div>
+     </div>
+
+<div class="rowthree"> this is row three </div>
+<div class="box"> test box</div>
+</div>
+<body>
+
+<html>
+
+<style>
+
+.gridcont {
+  display:grid;
+  width: 100vw;
+  height: 100vw;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 20% 70% 10%;
+  grid-template-areas:
+    "header header header"
+    ". main side"
+    "footer footer footer";
+
+}
+
+
+
+.rowone {
+  display: grid;
+background: red;
+grid-area: header
+}
+
+.rowtwo {
+background: orange;
+grid-area: main;
+width: auto;
+height: auto;
+}
+
+.box {
+  grid-area: side;
+  background:black;
+  grid-row: 2/4;
+}
+
+.rowthree{
+background:green;
+grid-area: footer;
+}
+
+.rowone h1 {
+  justify-self:center;
+  padding: 20px;
+}
+
+.title {
+  border-style: dashed;
+  border-width: 10px 10px 10px 10px;
+  border-color: black;
+}
+
+.flexcont {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: wrap;
+  align-content: flex-end;
+}
+
+.flexcol {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  width: 50%; }
+
+  .right {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-items: center;
+    background: white;
+    width: 50%;
+     margin-right: auto;
+}
+
+.twocols {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.bbb {
+  background: blue;
+}
+
+h3 {
+  font-size: 70px;
+}
+
+</style>
