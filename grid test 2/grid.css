@@ -1,0 +1,17 @@
+.gridcontainer {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 1rem;
+  grid-auto-rows: 200px;
+}
+
+.card {
+  Height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+  border-radius: 4px;
+}

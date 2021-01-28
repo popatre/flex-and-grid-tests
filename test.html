@@ -3,6 +3,7 @@
 <body>
 
   <div class="gridcont">
+
 <div class="rowone"> <h1 class="title">Title goes here</h1> </div>
      <div class="rowtwo">
         <div class="flexcont">
@@ -55,21 +56,25 @@
   display:grid;
   width: 100vw;
   height: 100vw;
-  grid-template-columns: 10% 80% 10%;
+  grid-template-columns: 1fr 8fr 1fr ;
   grid-template-rows: 20% 70% 10%;
   grid-template-areas:
     "header header header"
     ". main side"
     "footer footer footer";
+    column-gap: 10px;
+    row-gap: 15px;
+
 
 }
 
 
 
 .rowone {
-  display: grid;
+ display: grid;
 background: red;
-grid-area: header
+grid-area: header;
+
 }
 
 .rowtwo {
@@ -77,21 +82,24 @@ background: orange;
 grid-area: main;
 width: auto;
 height: auto;
+justify-content: end;
+
 }
 
 .box {
   grid-area: side;
   background:black;
-  grid-row: 2/4;
+  <!-- grid-row: 1/4; -->
 }
 
-.rowthree{
+.rowthree {
 background:green;
 grid-area: footer;
 }
 
-.rowone h1 {
+.title {
   justify-self:center;
+  align-self: center;
   padding: 20px;
 }
 
@@ -136,12 +144,13 @@ grid-area: footer;
 }
 
 
-.bbb {
-  background: blue;
+.bb {
+ font-family: fantasy;
 }
 
-h3 {
-  font-size: 70px;
+.rowtwo h3 {
+  font-size: 80px;
+  justify-self: start;
 }
 
 </style>
